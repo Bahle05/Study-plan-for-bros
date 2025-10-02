@@ -483,3 +483,301 @@ body {
     border: 1px solid var(--border-color) !important;
   }
 }
+
+/* ========================================= */
+/* HOMEPAGE SPECIFIC STYLES - ADD TO END OF style.css */
+/* ========================================= */
+
+/* Quick Actions Section - for Resources Hub Button */
+.quick-actions-section {
+    margin: var(--space-32) 0;
+    text-align: center;
+}
+
+.actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-20);
+    flex-wrap: wrap;
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+    padding: var(--space-20) var(--space-24);
+    background: var(--color-surface);
+    border: 2px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all var(--duration-normal) var(--ease-standard);
+    box-shadow: var(--shadow-sm);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.action-card.primary-action {
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-1) 100%);
+}
+
+.action-card.primary-action:hover {
+    background: linear-gradient(135deg, var(--color-bg-1) 0%, var(--color-bg-3) 100%);
+}
+
+.action-icon {
+    font-size: var(--font-size-3xl);
+    flex-shrink: 0;
+}
+
+.action-content {
+    flex: 1;
+    text-align: left;
+}
+
+.action-content h3 {
+    margin: 0 0 var(--space-4) 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+}
+
+.action-content p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.action-arrow {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.action-card:hover .action-arrow {
+    transform: translateX(4px);
+}
+
+/* Hero Section Styles */
+.hero-section {
+    text-align: center;
+    margin-bottom: var(--space-32);
+    padding: var(--space-32) 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-16);
+    line-height: var(--line-height-tight);
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    margin: 0;
+}
+
+/* Benefits Section */
+.benefits-section {
+    margin-bottom: var(--space-32);
+    padding: var(--space-32) var(--space-24);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-1) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-card-border);
+}
+
+.benefits-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-32);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-24);
+}
+
+.benefit-card {
+    display: flex;
+    gap: var(--space-16);
+    padding: var(--space-20);
+    background: var(--color-background);
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-card-border);
+    transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.benefit-icon {
+    font-size: var(--font-size-3xl);
+    flex-shrink: 0;
+}
+
+.benefit-content h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-8) 0;
+}
+
+.benefit-content p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    margin: 0;
+}
+
+/* Selection Title and Subtitle */
+.selection-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-12);
+    line-height: var(--line-height-tight);
+}
+
+.selection-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-32);
+}
+
+/* Avatar Card Enhancements */
+.avatar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.raikage-avatar {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.stayela-avatar {
+    background: linear-gradient(135deg, #4ECDC4, #7EDDD7);
+}
+
+.mozet-avatar {
+    background: linear-gradient(135deg, #45B7D1, #74C7E0);
+}
+
+.avatar-select-btn:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* App Title and Header */
+.app-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-8);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.app-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-normal);
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .action-card {
+        min-width: auto;
+        width: 100%;
+        max-width: 400px;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-12);
+    }
+    
+    .action-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .benefits-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .selection-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .app-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-16);
+    }
+    
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-12);
+    }
+    
+    .benefits-section {
+        padding: var(--space-24) var(--space-16);
+    }
+}
+
+/* Animation Enhancements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section,
+.quick-actions-section,
+.features-section,
+.user-selection,
+.benefits-section {
+    animation: fadeInUp 0.8s var(--ease-standard);
+}
+
+.avatar-card:nth-child(1) { animation-delay: 0.1s; }
+.avatar-card:nth-child(2) { animation-delay: 0.2s; }
+.avatar-card:nth-child(3) { animation-delay: 0.3s; }
+
