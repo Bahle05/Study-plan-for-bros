@@ -14,15 +14,42 @@
             <p class="app-subtitle">Your Personal Academic Success Companion</p>
         </header>
 
+        <!-- Welcome Section - Initially Hidden -->
+        <section class="welcome-section hidden" id="welcomeSection">
+            <div class="welcome-content">
+                <div class="welcome-avatar" id="welcomeAvatar">
+                    <span class="welcome-avatar-initial" id="welcomeAvatarInitial">R</span>
+                </div>
+                <div class="welcome-text">
+                    <h2 class="welcome-title" id="welcomeTitle">Welcome back, Raikage!</h2>
+                    <p class="welcome-message" id="welcomeMessage">Ready to continue your study journey? Let's achieve your academic goals together.</p>
+                </div>
+            </div>
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">Days Left</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Subjects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Study Sessions</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" id="heroSection">
             <div class="hero-content">
                 <h2 class="hero-title">Transform Your Study Routine</h2>
                 <p class="hero-description">Our comprehensive study timetable helps you master Mat221 Linear Algebra, IFS233 Project Management, and CSC212 Computer Science with strategic time blocking and proven learning techniques.</p>
             </div>
         </section>
 
-        <!-- Quick Actions  -->
+        <!-- Quick Actions Section -->
         <section class="quick-actions-section">
             <div class="actions-grid">
                 <a href="resources.html" class="action-card primary-action">
@@ -36,14 +63,8 @@
             </div>
         </section>
 
-        <!-- Welcome Section -->
-        <section class="welcome-section">
-            <div class="welcome-hero">
-                <h2>Transform Your Study Routine</h2>
-                <p class="hero-message">Transform your study routine with evidence-based scheduling and progress tracking</p>
-                <p class="description">Our comprehensive study timetable helps you master Mat221 Linear Algebra, IFS233 Project Management, and CSC212 Computer Science with strategic time blocking and proven learning techniques.</p>
-            </div>
-            
+        <!-- Features Grid -->
+        <section class="features-section">
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">📅</div>
@@ -64,13 +85,12 @@
             </div>
         </section>
 
- <!-- User Selection -->
-        <section class="user-selection">
-            <h2>Select your study companion to get started with your personalized timetable</h2>
+        <!-- User Selection -->
+        <section class="user-selection" id="userSelection">
+            <h2 class="selection-title">Select your study companion to get started with your personalized timetable</h2>
             <p class="selection-subtitle">Choose your learning persona for a customized experience</p>
             
             <div class="avatar-grid">
-                <!-- Your existing avatar cards here -->
                 <div class="avatar-card" data-user="Raikage">
                     <div class="avatar-container">
                         <div class="avatar-placeholder raikage-avatar">
@@ -112,74 +132,37 @@
             </div>
         </section>
 
-        <!-- Personalized Welcome Section (Hidden by default) -->
-        <section class="personalized-welcome hidden" id="personalizedWelcome">
-            <div class="welcome-message-card">
-                <div class="celebration-icon">🎉</div>
-                <h2 id="personalizedGreeting">Welcome back!</h2>
-                <p class="welcome-subtitle">Your study dashboard is ready</p>
-                <div class="dashboard-actions">
-                    <button class="btn btn--primary" id="viewTimetableBtn">View Your Timetable</button>
-                    <button class="btn btn--outline" id="changeProfileBtn">Change Profile</button>
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <h2 class="benefits-title">What You'll Get</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-content">
+                        <h3>Smart Scheduling</h3>
+                        <p>Optimized study blocks based on cognitive science and your learning patterns</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <h3>Subject Mastery</h3>
+                        <p>Comprehensive coverage of Linear Algebra, Project Management, and Computer Science</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Exam Success</h3>
+                        <p>Strategic preparation timeline with practice sessions and mock exams</p>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Timetable Preview Section (Hidden by default) -->
-        <section class="timetable-preview hidden" id="timetablePreview">
-            <h2>Your Study Timetable - October 2025</h2>
-            <div class="timetable-container">
-                <div class="week-navigation">
-                    <button class="week-nav-btn" id="prevWeek">&lt; Previous</button>
-                    <span class="current-week" id="currentWeekDisplay">Week 1 (Oct 1-7)</span>
-                    <button class="week-nav-btn" id="nextWeek">Next &gt;</button>
-                </div>
-                <div class="timetable-summary">
-                    <div class="summary-card">
-                        <h3>Today's Focus</h3>
-                        <p id="todaysFocus">Mat221: Sets & Functions</p>
-                    </div>
-                    <div class="summary-card">
-                        <h3>This Week</h3>
-                        <p>6 study sessions, 2 practice sessions</p>
-                    </div>
-                    <div class="summary-card">
-                        <h3>Next Exam</h3>
-                        <p>Mat221 - October 6th</p>
-                    </div>
-                </div>
-                <button class="btn btn--primary btn--full-width" id="openFullTimetable">Open Full Timetable</button>
-            </div>
-        </section>
-
-        <!-- Features Preview -->
-        <section class="preview-section">
-            <h2>What You'll Get</h2>
-            <div class="preview-grid">
-                <div class="preview-card">
-                    <div class="preview-icon">📊</div>
-                    <h3>Smart Scheduling</h3>
-                    <p>Optimized study blocks based on cognitive science and your learning patterns</p>
-                </div>
-                <div class="preview-card">
-                    <div class="preview-icon">📚</div>
-                    <h3>Subject Mastery</h3>
-                    <p>Comprehensive coverage of Linear Algebra, Project Management, and Computer Science</p>
-                </div>
-                <div class="preview-card">
-                    <div class="preview-icon">🎯</div>
-                    <h3>Exam Success</h3>
-                    <p>Strategic preparation timeline with practice sessions and mock exams</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 Study Dashboard. Empowering academic excellence through smart planning.</p>
-        </footer>
     </div>
-
-   <script src="app.js"></script>
+    
+    <script src="app.js"></script>
 </body>
 </html>
