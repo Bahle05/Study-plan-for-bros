@@ -1,160 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-scheme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Dashboard 2025 - Choose Your Profile</title>
+    <title>TARS Study Sync - Interactive Study Timetable</title>
+    <meta name="description" content="Enhanced collaborative study timetable for computer science students">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <h1>Study Dashboard 2025</h1>
-            <p class="subtitle">Your Personal Academic Success Companion</p>
-        </header>
-
-        <!-- Welcome Section -->
-        <section class="welcome-section">
-            <div class="welcome-hero">
-                <h2>Transform Your Study Routine</h2>
-                <p class="hero-message">Transform your study routine with evidence-based scheduling and progress tracking</p>
-                <p class="description">Our comprehensive study timetable helps you master Mat221 Linear Algebra, IFS233 Project Management, and CSC212 Computer Science with strategic time blocking and proven learning techniques.</p>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="sr-only" tabindex="1">Skip to main content</a>
+    
+    <!-- Header with Navigation -->
+    <header class="app-header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="brand">
+                    <h1 class="app-title">TARS Study Sync</h1>
+                    <span class="app-subtitle">Interactive Study Companion</span>
+                </div>
+                
+                <nav class="header-nav" role="navigation">
+                    <div class="user-profile">
+                        <div class="current-user" id="currentUser">
+                            <span class="user-avatar" id="userAvatar">R</span>
+                            <span class="user-name" id="userName">Raikage</span>
+                        </div>
+                        <button class="btn btn--outline btn--sm" id="switchUserBtn">Switch User</button>
+                    </div>
+                    
+                    <div class="theme-controls">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <span class="theme-icon light-icon">☀️</span>
+                            <span class="theme-icon dark-icon">🌙</span>
+                        </button>
+                    </div>
+                </nav>
             </div>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">📅</div>
-                    <span>16-day intensive exam preparation schedule</span>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <span>Evidence-based study techniques (Pomodoro, Spaced Repetition)</span>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <span>Color-coded subject prioritization</span>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⚖️</div>
-                    <span>Balanced leisure and study time allocation</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </header>
 
-        <!-- User Selection Section -->
-        <section class="user-selection">
-            <h2>Choose Your Profile</h2>
-            <p class="selection-subtitle">Select your study companion to get started with your personalized timetable</p>
-            
-            <div class="avatar-grid">
-                <div class="avatar-card" data-user="Raikage">
-                    <div class="avatar-container">
-                        <div class="avatar-placeholder raikage-avatar">
-                            <span class="avatar-initial">R</span>
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <div class="container">
+            <!-- Week Navigation -->
+            <section class="week-navigation-section" aria-label="Week selection">
+                <div class="week-nav-header">
+                    <h2 class="section-title">Study Schedule</h2>
+                    <div class="week-controls">
+                        <button class="week-nav-btn" id="prevWeek" aria-label="Previous week">
+                            <span>←</span>
+                        </button>
+                        <div class="current-week-display">
+                            <span class="week-label" id="currentWeekLabel">Week 1</span>
+                            <span class="week-dates" id="currentWeekDates">Oct 1-7, 2025</span>
+                        </div>
+                        <button class="week-nav-btn" id="nextWeek" aria-label="Next week">
+                            <span>→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Progress Overview -->
+                <div class="progress-overview" id="progressOverview">
+                    <div class="progress-card">
+                        <div class="progress-icon">📘</div>
+                        <div class="progress-info">
+                            <span class="progress-label">Mat221</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
                         </div>
                     </div>
-                    <div class="avatar-info">
-                        <h3 class="avatar-name">Raikage</h3>
-                        <p class="avatar-description">The determined achiever</p>
-                        <button class="avatar-select-btn">Select Profile</button>
-                    </div>
-                </div>
-
-                <div class="avatar-card" data-user="Stayela">
-                    <div class="avatar-container">
-                        <div class="avatar-placeholder stayela-avatar">
-                            <span class="avatar-initial">S</span>
+                    <div class="progress-card">
+                        <div class="progress-icon">📊</div>
+                        <div class="progress-info">
+                            <span class="progress-label">IFS233</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                            <span class="progress-text">50% Complete</span>
                         </div>
                     </div>
-                    <div class="avatar-info">
-                        <h3 class="avatar-name">Stayela</h3>
-                        <p class="avatar-description">The strategic planner</p>
-                        <button class="avatar-select-btn">Select Profile</button>
-                    </div>
-                </div>
-
-                <div class="avatar-card" data-user="Mozet">
-                    <div class="avatar-container">
-                        <div class="avatar-placeholder mozet-avatar">
-                            <span class="avatar-initial">M</span>
+                    <div class="progress-card">
+                        <div class="progress-icon">💻</div>
+                        <div class="progress-info">
+                            <span class="progress-label">CSC212</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <span class="progress-text">25% Complete</span>
                         </div>
                     </div>
-                    <div class="avatar-info">
-                        <h3 class="avatar-name">Mozet</h3>
-                        <p class="avatar-description">The focused learner</p>
-                        <button class="avatar-select-btn">Select Profile</button>
+                </div>
+            </section>
+
+            <!-- Timetable Grid -->
+            <section class="timetable-section" aria-label="Weekly timetable">
+                <div class="timetable-container" id="timetableContainer">
+                    <div class="timetable-legend">
+                        <h3>Subject Legend</h3>
+                        <div class="legend-items">
+                            <button class="legend-item" data-subject="Mat221">
+                                <span class="legend-color mat221"></span>
+                                <span class="legend-text">📘 Linear Algebra</span>
+                            </button>
+                            <button class="legend-item" data-subject="IFS233">
+                                <span class="legend-color ifs233"></span>
+                                <span class="legend-text">📊 Project Management</span>
+                            </button>
+                            <button class="legend-item" data-subject="CSC212">
+                                <span class="legend-color csc212"></span>
+                                <span class="legend-text">💻 Computer Science</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="timetable-grid" id="timetableGrid">
+                        <!-- Timetable will be dynamically populated -->
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Personalized Welcome Section (Hidden by default) -->
-        <section class="personalized-welcome hidden" id="personalizedWelcome">
-            <div class="welcome-message-card">
-                <div class="celebration-icon">🎉</div>
-                <h2 id="personalizedGreeting">Welcome back!</h2>
-                <p class="welcome-subtitle">Your study dashboard is ready</p>
-                <div class="dashboard-actions">
-                    <button class="btn btn--primary" id="viewTimetableBtn">View Your Timetable</button>
-                    <button class="btn btn--outline" id="changeProfileBtn">Change Profile</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Timetable Preview Section (Hidden by default) -->
-        <section class="timetable-preview hidden" id="timetablePreview">
-            <h2>Your Study Timetable - October 2025</h2>
-            <div class="timetable-container">
-                <div class="week-navigation">
-                    <button class="week-nav-btn" id="prevWeek">&lt; Previous</button>
-                    <span class="current-week" id="currentWeekDisplay">Week 1 (Oct 1-7)</span>
-                    <button class="week-nav-btn" id="nextWeek">Next &gt;</button>
-                </div>
-                <div class="timetable-summary">
-                    <div class="summary-card">
-                        <h3>Today's Focus</h3>
-                        <p id="todaysFocus">Mat221: Sets & Functions</p>
-                    </div>
-                    <div class="summary-card">
-                        <h3>This Week</h3>
-                        <p>6 study sessions, 2 practice sessions</p>
-                    </div>
-                    <div class="summary-card">
-                        <h3>Next Exam</h3>
-                        <p>Mat221 - October 6th</p>
+            <!-- Collaboration Hub -->
+            <section class="collaboration-section" aria-label="Collaboration hub">
+                <div class="section-header">
+                    <h2 class="section-title">Collaboration Hub</h2>
+                    <div class="active-users">
+                        <span class="active-label">Active:</span>
+                        <div class="user-badges">
+                            <span class="user-badge raikage">R</span>
+                            <span class="user-badge stayela">S</span>
+                            <span class="user-badge mozet">M</span>
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn--primary btn--full-width" id="openFullTimetable">Open Full Timetable</button>
-            </div>
-        </section>
+                
+                <div class="collaboration-grid">
+                    <div class="shared-notes-panel card">
+                        <div class="card-header">
+                            <h3>📝 Shared Notes</h3>
+                            <button class="btn btn--sm btn--primary" id="addNoteBtn">Add Note</button>
+                        </div>
+                        <div class="notes-list" id="notesList">
+                            <!-- Notes will be dynamically populated -->
+                        </div>
+                    </div>
+                    
+                    <div class="resources-panel card">
+                        <div class="card-header">
+                            <h3>📚 Study Resources</h3>
+                            <button class="btn btn--sm btn--primary" id="addResourceBtn">Add Resource</button>
+                        </div>
+                        <div class="resources-list" id="resourcesList">
+                            <!-- Resources will be dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Features Preview -->
-        <section class="preview-section">
-            <h2>What You'll Get</h2>
-            <div class="preview-grid">
-                <div class="preview-card">
-                    <div class="preview-icon">📊</div>
-                    <h3>Smart Scheduling</h3>
-                    <p>Optimized study blocks based on cognitive science and your learning patterns</p>
+            <!-- Quick Actions -->
+            <section class="quick-actions" aria-label="Quick actions">
+                <div class="actions-grid">
+                    <button class="action-card" id="exportCalendarBtn">
+                        <div class="action-icon">📅</div>
+                        <div class="action-content">
+                            <h3>Export Calendar</h3>
+                            <p>Sync with Google Calendar</p>
+                        </div>
+                    </button>
+                    <button class="action-card" id="studyStatsBtn">
+                        <div class="action-icon">📊</div>
+                        <div class="action-content">
+                            <h3>Study Stats</h3>
+                            <p>View progress analytics</p>
+                        </div>
+                    </button>
+                    <button class="action-card" id="examCountdownBtn">
+                        <div class="action-icon">⏰</div>
+                        <div class="action-content">
+                            <h3>Next Exam</h3>
+                            <p id="nextExamCountdown">5 days remaining</p>
+                        </div>
+                    </button>
                 </div>
-                <div class="preview-card">
-                    <div class="preview-icon">📚</div>
-                    <h3>Subject Mastery</h3>
-                    <p>Comprehensive coverage of Linear Algebra, Project Management, and Computer Science</p>
-                </div>
-                <div class="preview-card">
-                    <div class="preview-icon">🎯</div>
-                    <h3>Exam Success</h3>
-                    <p>Strategic preparation timeline with practice sessions and mock exams</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Resource Panel Modal -->
+    <div class="modal hidden" id="resourceModal" role="dialog" aria-labelledby="resourceModalTitle" aria-hidden="true">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="resourceModalTitle">Subject Resources</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="resourceModalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- User Switch Modal -->
+    <div class="modal hidden" id="userSwitchModal" role="dialog" aria-labelledby="userSwitchTitle" aria-hidden="true">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="userSwitchTitle">Switch User Profile</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-switch-grid">
+                    <button class="user-switch-card" data-user="Raikage">
+                        <div class="switch-avatar raikage">R</div>
+                        <div class="switch-info">
+                            <h3>Raikage</h3>
+                            <p>The determined achiever</p>
+                        </div>
+                    </button>
+                    <button class="user-switch-card" data-user="Stayela">
+                        <div class="switch-avatar stayela">S</div>
+                        <div class="switch-info">
+                            <h3>Stayela</h3>
+                            <p>The strategic planner</p>
+                        </div>
+                    </button>
+                    <button class="user-switch-card" data-user="Mozet">
+                        <div class="switch-avatar mozet">M</div>
+                        <div class="switch-info">
+                            <h3>Mozet</h3>
+                            <p>The focused learner</p>
+                        </div>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 Study Dashboard. Empowering academic excellence through smart planning.</p>
-        </footer>
+    <!-- Add Note Modal -->
+    <div class="modal hidden" id="addNoteModal" role="dialog" aria-labelledby="addNoteTitle" aria-hidden="true">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="addNoteTitle">Add Shared Note</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addNoteForm">
+                    <div class="form-group">
+                        <label class="form-label" for="noteSubject">Subject</label>
+                        <select class="form-control" id="noteSubject" required>
+                            <option value="">Select subject...</option>
+                            <option value="Mat221">📘 Linear Algebra</option>
+                            <option value="IFS233">📊 Project Management</option>
+                            <option value="CSC212">💻 Computer Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="noteContent">Note Content</label>
+                        <textarea class="form-control" id="noteContent" rows="4" placeholder="Enter your study note..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" id="cancelNoteBtn">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Add Note</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip Container -->
+    <div class="tooltip hidden" id="tooltip" role="tooltip">
+        <div class="tooltip-content" id="tooltipContent"></div>
+        <div class="tooltip-arrow"></div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading-indicator hidden" id="loadingIndicator">
+        <div class="spinner"></div>
+        <span>Loading...</span>
     </div>
 
     <script src="app.js"></script>
