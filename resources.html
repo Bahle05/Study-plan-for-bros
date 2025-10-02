@@ -3,291 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Resources Hub - TARS Study Sync</title>
-    <link rel="stylesheet" href="reources.css">
+    <title>Study Resources Hub - Your Academic Success Center</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+        <!-- Header Section -->
         <header class="header">
-            <div class="header-content">
-                <h1>Study Resources Hub</h1>
-                <p class="subtitle">Curated academic resources for your success</p>
-                <nav class="header-nav">
-                    <a href="../simple-study-sync/index.html" class="back-link">
-                        <span class="back-icon">←</span>
-                        Back to Study Timetable
-                    </a>
-                </nav>
-            </div>
+            <nav class="nav-back">
+                <a href="#" class="back-link" id="backToTimetable">
+                    <span class="back-icon">←</span>
+                    Back to Study Timetable
+                </a>
+            </nav>
+            <h1>Study Resources Hub</h1>
+            <p class="subtitle">Curated study materials for your academic success</p>
         </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
+        <!-- Resource Categories -->
+        <main class="resources-main">
             <!-- Computer Science Section -->
             <section class="subject-section" id="computer-science">
-                <div class="section-header">
-                    <div class="section-icon">💻</div>
-                    <div class="section-info">
+                <div class="subject-header">
+                    <div class="subject-icon">💻</div>
+                    <div class="subject-info">
                         <h2>Computer Science (CSC212)</h2>
-                        <p class="section-subtitle">Data Structures, Algorithms & Complexity Theory</p>
+                        <p class="subject-subtitle">Data Structures, Algorithms & Complexity Theory</p>
                     </div>
                 </div>
                 
                 <div class="resources-grid">
-                    <!-- Featured Resource -->
-                    <div class="resource-card featured">
+                    <div class="resource-card featured" data-url="https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O">
                         <div class="resource-header">
-                            <h3>Abdul Bari - Data Structures & Algorithms</h3>
-                            <span class="resource-type featured-badge">YouTube Playlist</span>
+                            <h3 class="resource-title">Abdul Bari - Data Structures & Algorithms</h3>
+                            <span class="resource-type youtube">YouTube Playlist</span>
                         </div>
                         <p class="resource-description">Comprehensive DSA tutorials with clear visual explanations and theory</p>
-                        <a href="https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn primary">Watch Now</button>
+                            <div class="featured-badge">⭐ Featured</div>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/">
                         <div class="resource-header">
-                            <h3>MIT OpenCourseWare - Introduction to Algorithms</h3>
-                            <span class="resource-type">University Course</span>
+                            <h3 class="resource-title">MIT OpenCourseWare - Introduction to Algorithms</h3>
+                            <span class="resource-type course">University Course</span>
                         </div>
                         <p class="resource-description">MIT's famous algorithms course with lectures by Erik Demaine</p>
-                        <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">View Course</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://www.youtube.com/watch?v=RBSGKlAvoiM">
                         <div class="resource-header">
-                            <h3>FreeCodeCamp - Data Structures & Algorithms</h3>
-                            <span class="resource-type">YouTube Course</span>
+                            <h3 class="resource-title">FreeCodeCamp - Data Structures & Algorithms</h3>
+                            <span class="resource-type youtube">YouTube Course</span>
                         </div>
                         <p class="resource-description">8-hour comprehensive course covering all major DSA topics</p>
-                        <a href="https://www.youtube.com/watch?v=RBSGKlAvoiM" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Watch Course</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://www.youtube.com/user/mycodeschool/playlists">
                         <div class="resource-header">
-                            <h3>mycodeschool - Data Structures</h3>
-                            <span class="resource-type">YouTube Channel</span>
+                            <h3 class="resource-title">mycodeschool - Data Structures</h3>
+                            <span class="resource-type youtube">YouTube Channel</span>
                         </div>
                         <p class="resource-description">Clear implementations and explanations of data structures in C/C++</p>
-                        <a href="https://www.youtube.com/user/mycodeschool/playlists" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Visit Channel</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">
                         <div class="resource-header">
-                            <h3>GeeksforGeeks - Algorithms</h3>
-                            <span class="resource-type">Website</span>
+                            <h3 class="resource-title">GeeksforGeeks - Algorithms</h3>
+                            <span class="resource-type website">Website</span>
                         </div>
                         <p class="resource-description">Comprehensive reference with articles, examples, and practice problems</p>
-                        <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Browse Articles</button>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Mathematics Section -->
             <section class="subject-section" id="mathematics">
-                <div class="section-header">
-                    <div class="section-icon">📊</div>
-                    <div class="section-info">
+                <div class="subject-header">
+                    <div class="subject-icon">📊</div>
+                    <div class="subject-info">
                         <h2>Mathematics (Mat221)</h2>
-                        <p class="section-subtitle">Linear Algebra & Matrix Operations</p>
+                        <p class="subject-subtitle">Linear Algebra & Matrix Operations</p>
                     </div>
                 </div>
                 
                 <div class="resources-grid">
-                    <!-- Featured Resource -->
-                    <div class="resource-card featured">
+                    <div class="resource-card featured" data-url="https://tutorial.math.lamar.edu/Classes/LinAlg/LinAlg.aspx">
                         <div class="resource-header">
-                            <h3>Paul's Online Math Notes - Linear Algebra</h3>
-                            <span class="resource-type featured-badge">Course Notes</span>
+                            <h3 class="resource-title">Paul's Online Math Notes - Linear Algebra</h3>
+                            <span class="resource-type notes">Course Notes</span>
                         </div>
                         <p class="resource-description">Comprehensive linear algebra notes by Paul Dawkins at Lamar University</p>
-                        <a href="https://tutorial.math.lamar.edu/Classes/LinAlg/LinAlg.aspx" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn primary">Access Notes</button>
+                            <div class="featured-badge">⭐ Featured</div>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/">
                         <div class="resource-header">
-                            <h3>MIT OpenCourseWare - Linear Algebra</h3>
-                            <span class="resource-type">University Course</span>
+                            <h3 class="resource-title">MIT OpenCourseWare - Linear Algebra</h3>
+                            <span class="resource-type course">University Course</span>
                         </div>
                         <p class="resource-description">Gilbert Strang's famous linear algebra course with video lectures</p>
-                        <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">View Course</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://www.khanacademy.org/math/linear-algebra">
                         <div class="resource-header">
-                            <h3>Khan Academy - Linear Algebra</h3>
-                            <span class="resource-type">Interactive Course</span>
+                            <h3 class="resource-title">Khan Academy - Linear Algebra</h3>
+                            <span class="resource-type interactive">Interactive Course</span>
                         </div>
                         <p class="resource-description">Step-by-step tutorials with practice exercises and visual explanations</p>
-                        <a href="https://www.khanacademy.org/math/linear-algebra" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Start Learning</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">
                         <div class="resource-header">
-                            <h3>3Blue1Brown - Essence of Linear Algebra</h3>
-                            <span class="resource-type">YouTube Series</span>
+                            <h3 class="resource-title">3Blue1Brown - Essence of Linear Algebra</h3>
+                            <span class="resource-type youtube">YouTube Series</span>
                         </div>
                         <p class="resource-description">Beautiful visual explanations of linear algebra concepts and intuition</p>
-                        <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Watch Series</button>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
+
+                    <div class="resource-card" data-url="http://linear.ups.edu/html/fcla.html">
                         <div class="resource-header">
-                            <h3>A First Course in Linear Algebra</h3>
-                            <span class="resource-type">Textbook</span>
+                            <h3 class="resource-title">LinearAlgebraToolkit - Practice Problems</h3>
+                            <span class="resource-type textbook">Textbook</span>
                         </div>
                         <p class="resource-description">Free online linear algebra textbook with comprehensive coverage</p>
-                        <a href="http://linear.ups.edu/html/fcla.html" target="_blank" class="resource-link">
-                            <span class="link-text">Open Resource</span>
-                            <span class="link-icon">↗</span>
-                        </a>
+                        <div class="resource-footer">
+                            <button class="resource-btn">Access Textbook</button>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Project Management Section -->
             <section class="subject-section" id="project-management">
-                <div class="section-header">
-                    <div class="section-icon">📋</div>
-                    <div class="section-info">
+                <div class="subject-header">
+                    <div class="subject-icon">📋</div>
+                    <div class="subject-info">
                         <h2>Project Management (IFS233)</h2>
-                        <p class="section-subtitle">PMBOK, Scheduling & Project Planning</p>
+                        <p class="subject-subtitle">PMBOK, Scheduling & Project Planning</p>
                     </div>
                 </div>
                 
                 <div class="resources-grid">
-                    <!-- Featured Resource -->
-                    <div class="resource-card featured download-card">
+                    <div class="resource-card featured download" data-file="IFS233-2025-UNIT6-PS-TM.pptx">
                         <div class="resource-header">
-                            <h3>IFS233 PowerPoint Presentations</h3>
-                            <span class="resource-type featured-badge">PDF Download</span>
+                            <h3 class="resource-title">IFS233 PowerPoint Presentations</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">Complete slide sets covering project schedule management and time management</p>
-                        <div class="download-info">
-                            <span class="download-icon">📎</span>
-                            <span class="download-note">Multiple presentation files available</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn primary download-btn">Download Now</button>
+                            <div class="featured-badge">⭐ Featured</div>
                         </div>
                     </div>
-                    
-                    <div class="resource-card download-card">
+
+                    <div class="resource-card download" data-file="AON-Tutorial-Tutor-1.pdf">
                         <div class="resource-header">
-                            <h3>AON Tutorial Materials</h3>
-                            <span class="resource-type">PDF Download</span>
+                            <h3 class="resource-title">AON Tutorial Materials</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">Activity-on-Node network diagram tutorials with practice exercises and solutions</p>
-                        <div class="download-info">
-                            <span class="download-icon">📄</span>
-                            <span class="download-note">Tutorial with memo and exercises</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn download-btn">Download PDF</button>
                         </div>
                     </div>
-                    
-                    <div class="resource-card download-card">
+
+                    <div class="resource-card download" data-file="AOA-Tutorial-Tutor-1.pdf">
                         <div class="resource-header">
-                            <h3>AOA Tutorial Materials</h3>
-                            <span class="resource-type">PDF Download</span>
+                            <h3 class="resource-title">AOA Tutorial Materials</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">Activity-on-Arrow network diagram tutorials with step-by-step guidance</p>
-                        <div class="download-info">
-                            <span class="download-icon">📄</span>
-                            <span class="download-note">Tutorial with solutions included</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn download-btn">Download PDF</button>
                         </div>
                     </div>
-                    
-                    <div class="resource-card download-card">
+
+                    <div class="resource-card download" data-file="Scope_Statement_Xccelerators_MyFutureUP.pdf">
                         <div class="resource-header">
-                            <h3>Project Scope Statement Template</h3>
-                            <span class="resource-type">PDF Download</span>
+                            <h3 class="resource-title">Project Scope Statement Template</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">MyFuture UP project scope statement with WBS and deliverables structure</p>
-                        <div class="download-info">
-                            <span class="download-icon">📋</span>
-                            <span class="download-note">BusinessXccelerators case study</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn download-btn">Download Template</button>
                         </div>
                     </div>
-                    
-                    <div class="resource-card download-card">
+
+                    <div class="resource-card download" data-file="IFS-T4-TEST.pdf">
                         <div class="resource-header">
-                            <h3>IFS233 Practice Tests</h3>
-                            <span class="resource-type">PDF Download</span>
+                            <h3 class="resource-title">IFS233 Practice Tests</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">Sample tests with solutions for project management concepts and calculations</p>
-                        <div class="download-info">
-                            <span class="download-icon">📝</span>
-                            <span class="download-note">Test questions with detailed solutions</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn download-btn">Download Tests</button>
                         </div>
                     </div>
-                    
-                    <div class="resource-card download-card">
+
+                    <div class="resource-card download" data-file="Project-tasks.pdf">
                         <div class="resource-header">
-                            <h3>Project Tasks & Scheduling</h3>
-                            <span class="resource-type">PDF Download</span>
+                            <h3 class="resource-title">Project Tasks & Scheduling</h3>
+                            <span class="resource-type pdf">PDF Download</span>
                         </div>
                         <p class="resource-description">Comprehensive project activity list with predecessor relationships and critical path analysis</p>
-                        <div class="download-info">
-                            <span class="download-icon">⏱️</span>
-                            <span class="download-note">Complete activity breakdown structure</span>
+                        <div class="resource-footer">
+                            <button class="resource-btn download-btn">Download Guide</button>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Download Notice -->
-                <div class="download-notice">
-                    <div class="notice-icon">ℹ️</div>
-                    <div class="notice-content">
-                        <h4>IFS233 Document Downloads</h4>
-                        <p>The documents above contain your course materials including tutorials, case studies, and practice exercises. These are the same files attached to your course and are available for offline study.</p>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!-- Quick Stats -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">16</div>
+                    <div class="stat-label">Total Resources</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Subject Areas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">PDF Downloads</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Quick Navigation</h4>
-                    <a href="../simple-study-sync/index.html" class="footer-link">Study Timetable</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Study Tips</h4>
-                    <p>Use these resources alongside your timetable for maximum effectiveness. Focus on one topic at a time and practice regularly.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Need Help?</h4>
-                    <p>Struggling with a topic? Try multiple resources for different perspectives on the same concept.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TARS Study Sync - Academic Success Made Simple</p>
-            </div>
+            <p>&copy; 2025 Study Resources Hub. Empowering your academic journey with quality resources.</p>
         </footer>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="modal hidden" id="downloadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="downloadTitle">Download Resource</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="downloadMessage">This resource is ready for download.</p>
+                <div class="download-info">
+                    <div class="download-icon">📄</div>
+                    <div class="download-details">
+                        <div class="download-filename" id="downloadFilename">filename.pdf</div>
+                        <div class="download-description" id="downloadDescription">Resource description</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="cancelDownload">Cancel</button>
+                <button class="btn btn--primary" id="confirmDownload">Download</button>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
