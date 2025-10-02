@@ -873,6 +873,95 @@ select.form-control {
 [data-color-scheme="dark"] .light-icon {
   display: none;
 }
+/* Quick Actions Section */
+.quick-actions-section {
+    margin: var(--space-32) 0;
+    text-align: center;
+}
+
+.actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-20);
+    flex-wrap: wrap;
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+    padding: var(--space-20) var(--space-24);
+    background: var(--color-surface);
+    border: 2px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all var(--duration-normal) var(--ease-standard);
+    box-shadow: var(--shadow-sm);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.action-card.primary-action {
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-1) 100%);
+}
+
+.action-card.primary-action:hover {
+    background: linear-gradient(135deg, var(--color-bg-1) 0%, var(--color-bg-3) 100%);
+}
+
+.action-icon {
+    font-size: var(--font-size-3xl);
+    flex-shrink: 0;
+}
+
+.action-content {
+    flex: 1;
+    text-align: left;
+}
+
+.action-content h3 {
+    margin: 0 0 var(--space-4) 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+}
+
+.action-content p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.action-arrow {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.action-card:hover .action-arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .action-card {
+        min-width: auto;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
 /* Navigation styling */
 .main-nav {
     padding: var(--space-12) 0;
